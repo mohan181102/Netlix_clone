@@ -1,0 +1,96 @@
+#Row{
+  display: flex; 
+  width: auto;
+  height: auto; 
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding-top: 20px;
+}
+
+#row{
+    margin-left: 20px;
+}
+
+#Row::-webkit-scrollbar{
+    display: none;
+}
+
+.Row_title{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_poster:hover{
+    transform: scale(1.08);
+}
+
+.withlarge{
+    max-height: 250px;
+}
+
+.yt_div{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    color: white;
+    object-fit: contain;
+    transition: all 0.4s;
+    position: fixed;
+    top: 60px;
+    
+}
+
+#youtube{
+    background-color: transparent;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 1.4rem;
+    
+}
+
+.yt_btn{
+    position: absolute;
+    
+    padding: 7px;
+    opacity: 0.7;
+    transition: all 0.1s;
+}
+
+.yt_btn:hover{
+    color: white;
+    opacity: 1;
+}
+
+.trailer_er{
+    position: fixed;
+    top: 90px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: red;
+    color: aliceblue;
+    
+    width: 220px;
+    align-self: center;
+    
+}
+#yt_er{
+    opacity: 0;
+}
+
+.btn{
+    background-color: white;
+    position: absolute;
+    margin-left: 5px;
+}
