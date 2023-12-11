@@ -3,6 +3,7 @@ import instance from "../axios";
 import "./Row.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Row({ title, fetchurl, backdrop }) {
   const [movies, setmovies] = useState([]);
@@ -18,6 +19,7 @@ function Row({ title, fetchurl, backdrop }) {
   useEffect(() => {
     async function fetchingdata() {
       const request = await instance.get(fetchurl);
+      console.log(request);
       setmovies(request.data.results);
       return request;
     }
@@ -54,6 +56,7 @@ function Row({ title, fetchurl, backdrop }) {
   function dlt() {
     document.getElementById("yt_er").style.opacity = "0";
   }
+
   return (
     <>
       <div id="row">
@@ -67,15 +70,13 @@ function Row({ title, fetchurl, backdrop }) {
                 className={`${
                   backdrop ? "row_poster" : "withlarge row_poster"
                 }`}
-                src={`https://image.tmdb.org/t/p/original${
-                  backdrop ? movie.backdrop_path : movie.poster_path
-                }`}
+                loading="lazy"
+                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                 alt={movie.name}
                 key={movie.id}
               />
             );
           })}
-          {console.log(movies)}
         </div>
         {videoId && (
           <div id="yt_popup" className="yt_div">

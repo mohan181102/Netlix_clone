@@ -25,11 +25,12 @@
 }
 
 .row_poster{
-    width: 100%;
+    width: 100px;
     object-fit: contain;
     max-height: 100px;
     margin-right: 10px;
     transition: transform 450ms;
+    opacity: 1;
 }
 
 .row_poster:hover{
@@ -99,6 +100,7 @@
     margin-left: 5px;
 }
 
+ 
 @media  (max-width:600px) {
     .yt_div{
     
@@ -111,5 +113,19 @@
          
         height: auto;
     }
+
+
+    /* @keyframes pulse {
+        0%{
+            background-color: rgba(0,0,0,0.6);
+        }
+        50%{
+            background-color: rgba(189, 134, 134, 0.568);
+        }
+        100%{
+            background-color: rgba(0,0,0,0.6);;
+        }
+    } */
     
+
 }

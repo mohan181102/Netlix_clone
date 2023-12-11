@@ -24,6 +24,7 @@ function App() {
       <Banner />
 
       <Row title="Netflix orignals" fetchurl={requist.fetch_Netflix_Orignals} />
+
       <Row
         title="Trending now"
         backdrop={true}
