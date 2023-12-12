@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Row from "./Row/Row";
 import requist from "./request";
 import Banner from "./Banner/Banner";
@@ -9,10 +9,16 @@ import { useState } from "react";
 
 function App() {
   const [progress, setprogress] = useState(0);
+  const [loading, setloading] = useState(false);
 
+  setTimeout(() => {
+    document.getElementById("loading").style.display = "none";
+  }, 8000);
   return (
     <div className="app">
-      {/* nav */}
+      <div id="loading">
+        <div id="loader"></div>
+      </div>
 
       <Nav />
       <LoadingBar

@@ -24,16 +24,18 @@
     margin-top: 10px;
 }
 
-.row_poster{
-    width: 100px;
+#row_poster{
+    width: auto;
+    height: auto;
     object-fit: contain;
     max-height: 100px;
     margin-right: 10px;
     transition: transform 450ms;
     opacity: 1;
+    
 }
 
-.row_poster:hover{
+#row_poster:hover{
     transform: scale(1.08);
 }
 

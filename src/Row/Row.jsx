@@ -3,7 +3,6 @@ import instance from "../axios";
 import "./Row.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Row({ title, fetchurl, backdrop }) {
   const [movies, setmovies] = useState([]);
