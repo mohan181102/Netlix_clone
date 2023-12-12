@@ -37,6 +37,7 @@ function Row({ title, fetchurl, backdrop }) {
           console.log("url:- ", url);
           // console.log(movie)
           let check = url.split("v=")[1].substring(0, 11);
+
           setvideoid(check);
         })
         .catch((e) => {
@@ -66,7 +67,7 @@ function Row({ title, fetchurl, backdrop }) {
               <img
                 id="row_poster"
                 onClick={() => handlesubmit(movie)}
-                className={`${
+                className={`row_poster${
                   backdrop ? "row_poster" : "withlarge row_poster"
                 }`}
                 loading="lazy"

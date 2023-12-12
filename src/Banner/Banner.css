@@ -100,7 +100,7 @@
 @media (max-width:600px) {
     #youtube{
         width: 100%;
-        height: min-content;
+        height: 150px;
         
     }
     .yt_div{

@@ -15,8 +15,7 @@
     background-color: black;
     position: fixed;
     display: flex;
-    z-index: 1;
-    display: block;
+    z-index: 2;
     align-items: center;
     justify-content: center;
 }

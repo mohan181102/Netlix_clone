@@ -21,14 +21,15 @@
     color: white;
     font-size: 1.4rem;
     font-weight: 700;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    padding-top: 10px;
 }
 
 #row_poster{
     width: auto;
     height: auto;
     object-fit: contain;
-    max-height: 100px;
+    max-height: 150px;
     margin-right: 10px;
     transition: transform 450ms;
     opacity: 1;
@@ -36,7 +37,8 @@
 }
 
 #row_poster:hover{
-    transform: scale(1.08);
+    transform: scale(1.2);
+    max-height: 160px;
 }
 
 .withlarge{
@@ -45,7 +47,7 @@
 
 .yt_div{
     width: 100%; 
-    height: 100%;
+    height: auto;
     display: flex;
     color: white;
     object-fit: contain;
@@ -59,7 +61,7 @@
 
 #youtube{
     background-color: transparent;
-    height: 40vh;
+    height: 50vh;
 
     width: 100%;
     border-radius: 1.4rem;
@@ -107,13 +109,13 @@
     .yt_div{
     
         width: 100%;
-        height: 100%;
+        height: auto;
         display: block;
     }
     #youtube{
         width: 100%;
          
-        height: auto;
+        height: 100px;
     }
 
 
