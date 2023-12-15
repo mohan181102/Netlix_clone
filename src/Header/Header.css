@@ -21,9 +21,7 @@
     background-color: #111;
 }
 .nav_logo{
-    width: 90px;
-    
-    
+    width: 90px;   
     object-fit: contain;
     margin-left: 10px;
 }
@@ -41,6 +39,49 @@
         width: 100vw;
         
 
+    }
+
+    #search{
+        height: 40px;
+        width: 40%;
+        margin-right: 90px;
+        display: flex;
+        
+        border-radius: 0.4rem;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #input{
+        width: 70%;
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #292828e6 transparent;
+        transition: 4ms;
+        opacity: 0;
+    }
+
+    #input:hover{
+        opacity: 1;
+        background-color: #292828e6;
+    }
+    #searchbtn{
+        color: white;
+        border: 0px;
+        width: 30%;
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+        height: 40px;
+        background-color: #292828e6;
+        opacity: 0.5;
+        
+    }
+    #searchbtn:hover{
+        opacity: 1;
     }
     
 }

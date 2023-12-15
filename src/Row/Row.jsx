@@ -57,12 +57,19 @@ function Row({ title, fetchurl, backdrop }) {
     document.getElementById("yt_er").style.opacity = "0";
   }
 
+  function scrol(e) {
+    if (e.target.scrollLeft > 1800) {
+      console.log("above 1800");
+    } else {
+      return;
+    }
+  }
   return (
     <>
       <div id="row">
         <h2 className={`Row_title`}>{title}</h2>
-        <div id="Row">
-          {movies.map((movie) => {
+        <div id="Row" onScroll={scrol}>
+          {movies.map((movie, i) => {
             return (
               <img
                 id="row_poster"

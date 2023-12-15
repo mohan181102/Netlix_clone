@@ -14,6 +14,7 @@ function App() {
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
   }, 8000);
+  
   return (
     <div className="app">
       <div id="loading">
