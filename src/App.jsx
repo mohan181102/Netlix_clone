@@ -9,12 +9,11 @@ import { useState } from "react";
 
 function App() {
   const [progress, setprogress] = useState(0);
-  const [loading, setloading] = useState(false);
 
   setTimeout(() => {
     document.getElementById("loading").style.display = "none";
-  }, 8000);
-  
+  }, 7000);
+
   return (
     <div className="app">
       <div id="loading">
