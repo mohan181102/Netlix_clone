@@ -3,11 +3,14 @@ import "./Header.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import movieTrailer from "movie-trailer";
+import YouTube from "react-youtube";
 
 function Nav() {
   const [value, setvalue] = useState(false);
   const [search, setsearch] = useState(null);
   const [searchmovies, setsearchmovies] = useState([]);
+  const [youtube, setyoutube] = useState(null);
 
   let url = `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=8ef30a39bd41ae9b8b5105a0f18e5deb`;
 
@@ -30,6 +33,7 @@ function Nav() {
     if (search == null) {
       setsearchmovies(null);
     }
+    console.log(searchmovies);
     console.log(searchmovies, "from here");
   }
 
@@ -41,6 +45,21 @@ function Nav() {
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
+
+  // trailler play
+
+  function handlesubmit(movie) {
+    document.getElementById("serchdata").style.display = "none";
+    movieTrailer(movie).then((url) =>
+      setyoutube(url.split("v=")[1].substring(0, 11))
+    );
+  }
+
+  function clear() {
+    setyoutube("");
+    document.getElementById("yt_popup").style.display = "none";
+  }
+
   return (
     <div className={`nav ${value ? "nav_change" : ""}`}>
       <img
@@ -70,6 +89,11 @@ function Nav() {
                           src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
                           loading="lazy"
                           id="seachimg"
+                          onClick={() =>
+                            handlesubmit(
+                              item ? item.title || item.original_title : null
+                            )
+                          }
                         />
                         <h2 id="searchmoviename">
                           {`${item.title || item.original_title}`}
@@ -82,6 +106,15 @@ function Nav() {
               : ""}
           </ul>
         </div>
+        {youtube && (
+          <div id="yt_popup" className="yt_div">
+            <YouTube id="youtube" videoId={youtube} />
+            <button className="yt_btn" onClick={() => clear()}>
+              {" "}
+              &#x274C;
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
