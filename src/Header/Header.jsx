@@ -38,6 +38,9 @@ function Nav() {
     change();
   }, [search]);
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
   return (
     <div className={`nav ${value ? "nav_change" : ""}`}>
       <img
@@ -68,10 +71,10 @@ function Nav() {
                           loading="lazy"
                           id="seachimg"
                         />
-                        <h2 id="searchmoviename">{`${
-                          item.title || item.original_title
-                        }`}</h2>
-                        <p id="searchmoviedes">{item.overview}</p>
+                        <h2 id="searchmoviename">
+                          {`${item.title || item.original_title}`}
+                        </h2>
+                        <p id="searchmoviedes">{truncate(item.overview, 50)}</p>
                       </li>
                     </>
                   );
