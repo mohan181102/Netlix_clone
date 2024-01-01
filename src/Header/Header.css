@@ -68,11 +68,152 @@
     opacity: 1;
 }
 
-@media  (max-width:600px) {
+#search{
+    height: 40px;
+    width: 40%;
+    margin-right: 90px;
+    display: flex;
+    /* border: 2px solid blue; */
+    border-radius: 0.4rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+#input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    border-radius: 0.4rem;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: 4ms;
+    opacity: 1;
+}
+
+#input:hover{
+    opacity: 1;
+    color: white;
+    background-color: #292828e6;
+}
+#searchbtn{
+    border: 0px;
+    width: 32%;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    height: 40px;
+    background-color: #292828e6 transparent;
+    opacity: 0.5;
+    
+    color: white;
+    object-fit: contain;
+    padding: 2px;
+    font-size: small;
+}
+#searchbtn:hover{
+    color: white;
+    opacity: 1;
+    background-color: solid;
+}
+#serchdata{
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    right: 0px;
+    height: 80%;
+    background-color: black;
+    overflow-y: scroll;
+    padding: 20px;
+    display: none;
+}
+
+#serchdata::-webkit-scrollbar{
+    display: none;
+}
+#ulformovies{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    /* border: 2px solid green; */
+}
+
+#ulformovies::-webkit-scrollbar{
+    display: none;
+}
+#everysearchmovie{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+#seachimg{
+    width: 30%;
+    height: 180px;
+    background-size: cover;
+    overflow: hidden;
+    /* animation: glow infinite ; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+    
+    box-shadow: 2px 2px 3px white;
+}
+@keyframes  glow {
+    0%{
+        box-shadow: 0px 0px 0px ;
+
+    }
+    100%{
+        box-shadow: 2px 2px 3px white;
+    }
+}
+#seachimg:hover{
+    transform: scale(1.2);
+}
+#searchmoviename{
+    background-color: red;
+    width: 70%;
+    margin-left: 10px;
+    padding-left: 4px;
+    height: 30%;
+    position: relative;
+    left: 142px;
+    color: white;
+    
+    overflow-x: auto;
+}
+#searchmoviedes{
+    position: relative;
+    left: 30%;
+
+    bottom: 145px;
+    padding-left: 10px;
+    height: 50%;
+    margin-left: 10px;
+    color: white;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(100,100,100,0.5)
+        
+    );
+    
+    /* overflow: scroll; */
+    width: 70%;
+    font-size: smaller;
+    
+    
+}
+
+
+@media screen and (max-width:600px) {
     .nav{
         width: 100vw;
-        
-
     }
 
     #search{
@@ -86,18 +227,17 @@
         justify-content: flex-end;
     }
     #input{
-        width: 65%;
+        width: 100%;
         height: 40px;
         padding: 10px;
         display: flex;
-        border-top-left-radius: 0.4rem;
-        border-bottom-left-radius: 0.4rem;
+        border-radius: 0.4rem;
         align-items: center;
         color: white;
         justify-content: space-between;
         background-color: #292828e6 transparent;
         transition: 4ms;
-        opacity: 0;
+        opacity: 1;
     }
 
     #input:hover{
@@ -130,6 +270,7 @@
         top: 60px;
         right: 0px;
         height: 80%;
+        
         background-color: black;
         overflow-y: scroll;
         padding: 20px;
@@ -142,7 +283,7 @@
         /* border: 2px solid green; */
     }
     #everysearchmovie{
-        /* border: 1px solid white; */
+        border: 0px solid white;
         width: 100%;
         height: 90px;
         margin-top: 20px;
@@ -178,8 +319,12 @@
     #searchmoviename{
         background-color: red;
         width: 70%;
+        border:1px solid green;
+        margin-left: 10px;
         padding-left: 4px;
         height: 30%;
+        position: relative;
+        left: 10px;
         color: white;
         
         overflow-x: auto;
@@ -206,13 +351,13 @@
 
     #youtube{
         width: 100%;
-        height: 150px;
-        
+        height: 30%;
     }
     .yt_div{
         justify-content: center;
         padding-top: 20px;
         left: 20px;
+        
     }
     .yt_btn{
         background-color: transparent;

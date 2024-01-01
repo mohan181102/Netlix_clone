@@ -76,8 +76,9 @@ function Nav() {
         <input
           id="input"
           onChange={(e) => setsearch(e.target.value ? e.target.value : null)}
+          placeholder="Search.."
         />
-        <button id="searchbtn">search</button>
+
         <div id="serchdata">
           <ul id="ulformovies">
             {searchmovies
@@ -103,7 +104,7 @@ function Nav() {
                     </>
                   );
                 })
-              : ""}
+              : "loading..."}
           </ul>
         </div>
         {youtube && (
