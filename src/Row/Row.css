@@ -1,7 +1,7 @@
 #Row{
   display: flex; 
   width: auto;
-  height: auto; 
+  height: 190px; 
   overflow-y: hidden;
   overflow-x: scroll;
   padding-top: 20px;
@@ -38,6 +38,7 @@
 
 #row_poster:hover{
     transform: scale(1.2);
+    position: ;
     max-height: 160px;
 }
 

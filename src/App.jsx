@@ -6,6 +6,7 @@ import "./App.css";
 import LoadingBar from "react-top-loading-bar";
 import Nav from "./Header/Header";
 import { useState } from "react";
+import Loader from "./Loader";
 
 function App() {
   const [progress, setprogress] = useState(0);
@@ -16,16 +17,11 @@ function App() {
 
   return (
     <div className="app">
-      <div id="loading">
+      {/* <div id="loading">
         <div id="loader"></div>
-      </div>
-
+      </div> */}
+      <Loader />
       <Nav />
-      <LoadingBar
-        color="red"
-        progress={progress}
-        onLoaderFinished={(e) => setprogress(0)}
-      />
       {/*Banner  */}
       <Banner />
 
@@ -68,6 +64,7 @@ function App() {
         backdrop={true}
         fetchurl={requist.fetcht_Documentaries}
       />
+      <Loader display={false} />
     </div>
   );
 }

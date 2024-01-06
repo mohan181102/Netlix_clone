@@ -142,11 +142,11 @@
     display: none;
 }
 #everysearchmovie{
-    /* border: 1px solid white; */
+ 
     width: 100%;
     height: 180px;
     margin-top: 20px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
@@ -177,24 +177,26 @@
 }
 #searchmoviename{
     background-color: red;
-    width: 70%;
-    margin-left: 10px;
-    padding-left: 4px;
-    height: 30%;
-    position: relative;
-    left: 142px;
-    color: white;
-    
-    overflow-x: auto;
+    width: 67%;
+    margin-left : 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+    height: 25%;
+    color: white;    
+    overflow-y: auto;
+    position: relative; 
+    left: 0px;
 }
-#searchmoviedes{
-    position: relative;
-    left: 30%;
 
+ 
+#searchmoviedes{
+    position: relative; 
+    left: 30%; 
+    margin-top: 40px;
     bottom: 145px;
     padding-left: 10px;
-    height: 50%;
-    margin-left: 10px;
+    height: 40%;   
+    margin-left: 20px;
     color: white;
     background-image: linear-gradient(
         180deg,
@@ -202,16 +204,19 @@
         rgba(100,100,100,0.5)
         
     );
-    
-    /* overflow: scroll; */
-    width: 70%;
+    width: 67%;
     font-size: smaller;
     
     
 }
 
+#pdiv{
+    height: auto;
+    width: auto;
+}
 
-@media screen and (max-width:600px) {
+
+@media (max-width:600px) {
     .nav{
         width: 100vw;
     }
@@ -287,6 +292,7 @@
         width: 100%;
         height: 90px;
         margin-top: 20px;
+        position: relative;
         
         display: flex;
         flex-wrap: wrap;
@@ -319,15 +325,13 @@
     #searchmoviename{
         background-color: red;
         width: 70%;
-        border:1px solid green;
-        margin-left: 10px;
-        padding-left: 4px;
+        /* border:1px solid green; */
         height: 30%;
         position: relative;
-        left: 10px;
+        left: 0px;
         color: white;
         
-        overflow-x: auto;
+    
     }
     #searchmoviedes{
         position: relative;

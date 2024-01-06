@@ -99,6 +99,7 @@ function Nav() {
                         <h2 id="searchmoviename">
                           {`${item.title || item.original_title}`}
                         </h2>
+
                         <p id="searchmoviedes">{truncate(item.overview, 50)}</p>
                       </li>
                     </>
